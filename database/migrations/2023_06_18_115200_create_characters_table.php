@@ -24,6 +24,7 @@ return new class extends Migration
             $table->json('children');
             $table->string('playedBy');
             $table->text('content');
+            $table->string('house');
             $table->timestamps();
 
         });
