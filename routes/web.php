@@ -20,5 +20,10 @@ Route::prefix('/panel')->group(function (){
     Route::get('/',function (){
         return view('Panel.index');
     });
+    Route::prefix('characters')->group(function (){
+        Route::get('new' , function (){
+            return view();
+        });
+    });
 });
 
