@@ -104,7 +104,6 @@
                 <div class="collapse" id="characters-submenu">
                     <ul class="nav flex-column sub-menu">
                         <li class="nav-item"> <a class="nav-link" href="{{ url('/panel/characters') }}"> کارکتر ها</a></li>
-                        <li class="nav-item"> <a class="nav-link" href="{{ url('/panel/characters/property') }}">ویژگی ها</a></li>
                         <li class="nav-item"> <a class="nav-link" href="/panel/characters/new">اضافه کردن کاراکتر</a></li>
                     </ul>
                 </div>
@@ -123,7 +122,6 @@
                 <div class="collapse" id="houses-submenu">
                     <ul class="nav flex-column sub-menu">
                         <li class="nav-item"> <a class="nav-link" href="{{ url('/panel/houses') }}"> خاندان ها</a></li>
-                        <li class="nav-item"> <a class="nav-link" href="{{ url('/panel/houses/property') }}">ویژگی ها</a></li>
                         <li class="nav-item"> <a class="nav-link" href="/panel/houses/new">اضافه کردن خاندان</a></li>
                     </ul>
                 </div>

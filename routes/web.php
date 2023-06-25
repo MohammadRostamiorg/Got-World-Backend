@@ -22,7 +22,7 @@ Route::prefix('/panel')->group(function (){
     });
     Route::prefix('characters')->group(function (){
         Route::get('new' , function (){
-            return view();
+            return view('Panel.characters.new');
         });
     });
 });
