@@ -5,7 +5,7 @@
     <style>
         .container{
             width: 85lvw;
-            height: 90lvh;
+            min-height: 50lvh;
             background: #191C24;
             margin: 100px auto;
             direction: rtl;
@@ -89,6 +89,79 @@
 
                 </textarea>
             </div>
+
+
+            <div class="row">
+                <label style="display: block">
+                    تولد :
+                </label>
+                <br>
+                <br>
+                <Input type="text" placeholder="سال تولد بر اساس فتح اگان">
+            </div>
+
+
+            <div class="row">
+                <label style="display: block">
+                    مرگ :
+                </label>
+                <br>
+                <br>
+                <Input type="text" placeholder="سال مردن بر اساس فتح اگان">
+            </div>
+            <div class="row">
+                <label style="display: block">
+                    جنسیت  :
+                </label>
+                <br>
+                <br>
+                <select>
+                    <option>
+                        مذکر
+                    </option>
+                    <option>
+                        مونث
+                    </option>
+                </select>
+            </div>
+
+            <div class="row">
+                <label style="display: block">
+                    فرزند ها(فرزند هارا با کاما , از هم جدا کنید) :
+                </label>
+                <br>
+                <br>
+                <textarea>
+
+                </textarea>
+            </div>
+
+            <div class="row">
+                <label style="display: block">
+                    بازیگر :
+                </label>
+                <br>
+                <br>
+                <Input type="text" placeholder="چه کسی نقش اورا ایفا کرده">
+            </div>
+            <div class="row">
+                <label style="display: block">
+                    متن معرفی کاراکتر
+                </label>
+                <br>
+                <br>
+                <textarea style="min-height: 500px">
+
+                </textarea>
+            </div>
+
+
+            <div class="row">
+                <button style="background: #00ac4a;width: 100px;height: 50px;border-radius:30px;box-sizing: border-box;padding: 5px;text-align: center;color: #fff;border: none ">
+                    ثبت کاراکتر
+                </button>
+            </div>
+
         </form>
     </div>
 
