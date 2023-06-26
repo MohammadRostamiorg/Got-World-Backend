@@ -14,17 +14,17 @@ return new class extends Migration
         Schema::create('characters', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('father');
-            $table->string('mother');
-            $table->string('born');
-            $table->string('died');
-            $table->string('culture');
-            $table->json('aliases');
-            $table->boolean('isFemale');
-            $table->json('children');
-            $table->string('playedBy');
-            $table->text('content');
-            $table->string('house');
+            $table->string('father')->nullable();
+            $table->string('mother')->nullable();
+            $table->string('born')->nullable();
+            $table->string('died')->nullable();
+            $table->string('culture')->nullable();
+            $table->json('aliases')->nullable();
+            $table->boolean('isFemale')->nullable();
+            $table->json('children')->nullable();
+            $table->string('playedBy')->nullable();
+            $table->text('content')->nullable();
+            $table->string('house')->nullable();
             $table->timestamps();
 
         });

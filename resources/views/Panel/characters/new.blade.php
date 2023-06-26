@@ -36,14 +36,15 @@
         }
     </style>
     <div class="container">
-        <form action="">
+        <form method="post" action="{{route('character.store')}}">
+            @csrf
             <div class="row">
                 <label style="display: block">
                     اسم :
                 </label>
                 <br>
                 <br>
-                <Input type="text" placeholder="اسم کارکتر را وارد کنید">
+                <Input name="name" type="text" placeholder="اسم کارکتر را وارد کنید">
             </div>
             <div class="row">
                 <label style="display: block">
@@ -51,7 +52,7 @@
                 </label>
                 <br>
                 <br>
-                <Input type="text" placeholder="اسم پدر کارکتر را وارد کنید">
+                <Input name="father" type="text" placeholder="اسم پدر کارکتر را وارد کنید">
             </div>
             <div class="row">
                 <label style="display: block">
@@ -59,7 +60,7 @@
                 </label>
                 <br>
                 <br>
-                <Input type="text" placeholder="اسم مادر کارکتر را وارد کنید">
+                <Input name="mother"  type="text" placeholder="اسم مادر کارکتر را وارد کنید">
             </div>
             <div class="row">
                 <label style="display: block">
@@ -67,9 +68,8 @@
                 </label>
                 <br>
                 <br>
-                <select>
+                <select name="house" >
 {{--                    this secition will be dynamic later --}}
-                    <option>خاندان را انتخاب کنید</option>
                     <option>لنیستر</option>
                     <option>استارک</option>
                     <option>تارگرین</option>
@@ -85,7 +85,7 @@
                 </label>
                 <br>
                 <br>
-                <textarea>
+                <textarea name="aliases" >
 
                 </textarea>
             </div>
@@ -97,7 +97,7 @@
                 </label>
                 <br>
                 <br>
-                <Input type="text" placeholder="سال تولد بر اساس فتح اگان">
+                <Input name="born"  type="text" placeholder="سال تولد بر اساس فتح اگان">
             </div>
 
 
@@ -107,7 +107,7 @@
                 </label>
                 <br>
                 <br>
-                <Input type="text" placeholder="سال مردن بر اساس فتح اگان">
+                <Input name="died" type="text" placeholder="سال مردن بر اساس فتح اگان">
             </div>
             <div class="row">
                 <label style="display: block">
@@ -115,7 +115,7 @@
                 </label>
                 <br>
                 <br>
-                <select>
+                <select name="gender" >
                     <option>
                         مذکر
                     </option>
@@ -131,7 +131,7 @@
                 </label>
                 <br>
                 <br>
-                <textarea>
+                <textarea name="children">
 
                 </textarea>
             </div>
@@ -142,7 +142,7 @@
                 </label>
                 <br>
                 <br>
-                <Input type="text" placeholder="چه کسی نقش اورا ایفا کرده">
+                <Input name="playedBy" type="text" placeholder="چه کسی نقش اورا ایفا کرده">
             </div>
             <div class="row">
                 <label style="display: block">
@@ -150,7 +150,7 @@
                 </label>
                 <br>
                 <br>
-                <textarea style="min-height: 500px">
+                <textarea name="content" style="min-height: 500px">
 
                 </textarea>
             </div>
