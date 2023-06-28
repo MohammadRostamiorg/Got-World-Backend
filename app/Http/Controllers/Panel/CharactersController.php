@@ -11,4 +11,10 @@ class CharactersController extends Controller
         $CharactersRepository = new CharactersRepositrory();
         $CharactersRepository->storeCharacter($request);
     }
+
+    public function getAll(){
+        $CharactersRepository = new CharactersRepositrory();
+        $CharactersRepository = $CharactersRepository->getAll();
+        return response($CharactersRepository, 200);
+    }
 }

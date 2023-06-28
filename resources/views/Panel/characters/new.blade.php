@@ -116,10 +116,10 @@
                 <br>
                 <br>
                 <select name="gender" >
-                    <option>
+                    <option value="male">
                         مذکر
                     </option>
-                    <option>
+                    <option value="female">
                         مونث
                     </option>
                 </select>
