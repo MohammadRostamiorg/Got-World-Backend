@@ -21,6 +21,7 @@ Route::prefix('/panel')->group(function (){
         return view('Panel.index');
     });
     Route::prefix('characters')->group(function (){
+        Route::get('/',[CharactersController::class,'showAll']);
         Route::get('new' , function (){
             return view('Panel.characters.new');
 
