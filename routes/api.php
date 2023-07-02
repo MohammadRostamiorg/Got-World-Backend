@@ -17,4 +17,9 @@ use App\Http\Controllers\Panel\CharactersController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::any('/characters',[CharactersController::class,'getAll']);
+Route::prefix('/characters')->group(function (){
+    Route::any('/',[CharactersController::class,'getAll']);
+    Route::delete('/delete/{id}',function ($id){
+        return $id;
+    });
+});

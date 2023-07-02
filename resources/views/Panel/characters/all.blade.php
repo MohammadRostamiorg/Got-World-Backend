@@ -49,7 +49,7 @@
                 </p>
                 <div class="btns">
 
-                    <form method="post" action="{{ url('/characters/delete/'.$Character->id) }}">
+                    <form method="post" action="{{ url('/api/characters/delete/'.$Character->id) }}">
                         @method('delete')
                         @csrf
                         <button class="btn btn-danger">
