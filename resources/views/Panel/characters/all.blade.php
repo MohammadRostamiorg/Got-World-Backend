@@ -49,10 +49,14 @@
                 </p>
                 <div class="btns">
 
-                    <a class="block btn-link" href="{{ url('/characters/delete/'.$Character->id) }}">
-            <span class="btn btn-danger">
+                    <form method="post" action="{{ url('/characters/delete/'.$Character->id) }}">
+                        @method('delete')
+                        @csrf
+                        <button class="btn btn-danger">
                 Delete
-            </span>
+            </button>
+                    </form>
+
                     </a>
                     <a class="block btn-link" href="{{ url('/characters/edit/'.$Character->id) }}">
                     <span class="btn btn-warning">
