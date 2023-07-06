@@ -24,4 +24,6 @@ class CharactersController extends Controller
         return response($Characters , 200);
     }
 
+    
+
 }
