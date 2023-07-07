@@ -8,10 +8,6 @@ use App\Models\Characters;
 
 class CharactersController extends Controller
 {
-    function deleteCharacter($id){
-        $Character = Characters::query()->find($id);
-        $Character->delete();
-        redirect()->back()->with(['status' => 200, "message" => 'character deleted']);
-    }
+
 }
-    
+

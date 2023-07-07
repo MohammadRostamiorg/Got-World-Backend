@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Panel;
 
 use App\Http\Controllers\Controller;
+use App\Models\Characters;
 use Illuminate\Http\Request;
 use App\Repositories\CharactersRepositrory;
 class CharactersController extends Controller
@@ -24,6 +25,12 @@ class CharactersController extends Controller
         return response($Characters , 200);
     }
 
-    
+    function deleteCharacter($id){
+        $Character = Characters::query()->find($id);
+        $Character->delete();
+        return redirect()->back()->with(['status' => 200, "message" => 'character deleted']);
+    }
+
+
 
 }

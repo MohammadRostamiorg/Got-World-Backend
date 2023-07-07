@@ -20,5 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 Route::prefix('/characters')->group(function (){
     Route::any('/',[CharactersController::class,'getAll']);
-    Route::delete('/delete/{id}',[CharactersControllerApi::class,'deleteCharacter']);
+    Route::delete('/delete/{id}',[CharactersController::class,'deleteCharacter']);
 });
