@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Panel\CharactersController;
+use App\Http\Controllers\Api\v1\CharactersController as CharactersControllerApi;
 /*
 |--------------------------------------------------------------------------|
 | API Routes                                                                                                              |
@@ -19,7 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 Route::prefix('/characters')->group(function (){
     Route::any('/',[CharactersController::class,'getAll']);
-    Route::delete('/delete/{id}',function ($id){
-        return $id;
-    });
+    Route::delete('/delete/{id}',[CharactersControllerApi::class,'deleteCharacter']);
 });
