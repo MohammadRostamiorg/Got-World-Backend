@@ -14,7 +14,7 @@ use App\Http\Controllers\Panel\CharactersController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/panel');
 });
 Route::prefix('/panel')->group(function (){
     Route::get('/',function (){
