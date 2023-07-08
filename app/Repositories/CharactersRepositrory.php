@@ -4,7 +4,7 @@ namespace App\Repositories;
 use App\Models\Characters;
 class CharactersRepositrory{
     public function storeCharacter($characterInfo){
-//        dd($characterInfo);
+        dd(json_decode(json_encode(explode(',',$characterInfo->children))));
         $Charcater = new Characters();
         $Charcater->name = $characterInfo->name;
         $Charcater->father = $characterInfo->father;
@@ -16,6 +16,9 @@ class CharactersRepositrory{
         $aliases = explode(',',$characterInfo->aliases);
         $aliases = json_encode($aliases);
         $Charcater->aliases= $aliases;
+        $children = explode(',',$characterInfo->children);
+        $children = json_encode($children);
+        $Charcater->children= $children;
         if ($characterInfo->gender === "female"){
             $Charcater->IsFemale= true;
         }else{
