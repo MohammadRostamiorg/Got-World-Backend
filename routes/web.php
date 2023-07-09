@@ -26,6 +26,7 @@ Route::prefix('/panel')->group(function (){
             return view('Panel.characters.new');
 
         });
+        Route::get('/edit/{id}',[CharactersController::class,'editCharacter']);
 
         Route::post('store',[CharactersController::class,'store'])->name('character.store');
     });
