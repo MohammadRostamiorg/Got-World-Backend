@@ -32,8 +32,9 @@ class CharactersController extends Controller
         return redirect()->back()->with(['status' => 200, "message" => 'character deleted']);
     }
 
-    function editCharacter(){
-        
+    function editCharacter($id){
+        $Character = Characters::query()->find($id);
+        dd($Character);
     }
 
 
