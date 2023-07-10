@@ -44,7 +44,7 @@
                 </label>
                 <br>
                 <br>
-                <Input name="name" type="text" placeholder="اسم کارکتر را وارد کنید">
+                <Input value="{{$Character->name}}" name="name" type="text" placeholder="اسم کارکتر را وارد کنید">
             </div>
             <div class="row">
                 <label style="display: block">
@@ -52,7 +52,7 @@
                 </label>
                 <br>
                 <br>
-                <Input name="father" type="text" placeholder="اسم پدر کارکتر را وارد کنید">
+                <Input value="{{$Character->father}}" name="father" type="text" placeholder="اسم پدر کارکتر را وارد کنید">
             </div>
             <div class="row">
                 <label style="display: block">
@@ -60,7 +60,7 @@
                 </label>
                 <br>
                 <br>
-                <Input name="mother"  type="text" placeholder="اسم مادر کارکتر را وارد کنید">
+                <Input value="{{$Character->mother}}" name="mother"  type="text" placeholder="اسم مادر کارکتر را وارد کنید">
             </div>
             <div class="row">
                 <label style="display: block">

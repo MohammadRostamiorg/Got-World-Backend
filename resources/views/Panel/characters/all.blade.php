@@ -58,7 +58,7 @@
                     </form>
 
                     </a>
-                    <a class="block btn-link" href="{{ url('/characters/edit/'.$Character->id) }}">
+                    <a class="block btn-link" href="{{ url('panel/characters/edit/'.$Character->id) }}">
                     <span class="btn btn-warning">
 
                             Edit

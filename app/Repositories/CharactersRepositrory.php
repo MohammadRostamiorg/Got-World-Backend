@@ -4,11 +4,11 @@ namespace App\Repositories;
 use App\Models\Characters;
 class CharactersRepositrory{
     public function storeCharacter($characterInfo){
-        dd(json_decode(json_encode(explode(',',$characterInfo->children))));
+
         $Charcater = new Characters();
         $Charcater->name = $characterInfo->name;
         $Charcater->father = $characterInfo->father;
-        $Charcater->mother = $characterInfo->mohter;
+        $Charcater->mother = $characterInfo->mother;
         $Charcater->house = $characterInfo->house;
         $Charcater->born = $characterInfo->born;
         $Charcater->died= $characterInfo->died;

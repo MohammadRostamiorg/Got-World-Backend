@@ -34,7 +34,7 @@ class CharactersController extends Controller
 
     function editCharacter($id){
         $Character = Characters::query()->find($id);
-        dd($Character);
+        return view('Panel.characters.edit',compact('Character'));
     }
 
 
