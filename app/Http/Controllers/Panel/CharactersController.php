@@ -20,6 +20,12 @@ class CharactersController extends Controller
         return redirect('/panel/characters');
     }
 
+    public function editStore(Request $request){
+        $CharactersRepository = new CharactersRepositrory();
+        $CharactersRepository->storeCharacterEdit($request);
+        return redirect('/panel/characters');
+    }
+
     public function getAll(){ // for api
         $CharactersRepository = new CharactersRepositrory();
         $Characters = $CharactersRepository->getAll();

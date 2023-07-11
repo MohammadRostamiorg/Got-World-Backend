@@ -1,9 +1,8 @@
 @extends('Panel.layout.master')
 
-
 @section('content')
     <style>
-        .container{
+        .container {
             width: 85lvw;
             min-height: 50lvh;
             background: #191C24;
@@ -12,32 +11,38 @@
             box-sizing: border-box;
             padding: 50px;
         }
-        .container .row{
+
+        .container .row {
             display: flex;
-            flex-direction:column ;
+            flex-direction: column;
         }
-        .container input , .container select , .container textarea{
+
+        .container input, .container select, .container textarea {
             width: 80%;
             margin: 30px;
             height: 50px;
             color: #fff;
-            background: rgba(0,0,0,.5);
+            background: rgba(0, 0, 0, .5);
             border: none;
 
         }
-        .container label{
+
+        .container label {
             display: block;
             direction: rtl;
             text-align: right;
 
         }
-        .container textarea{
+
+        .container textarea {
             height: 100px;
         }
     </style>
     <div class="container">
-        <form method="post" action="{{route('character.store')}}">
+        <form method="post" action="{{route('character.editStore')}}">
+
             @csrf
+            <input name="id" type="hidden" value="{{ $Character->id }}">
             <div class="row">
                 <label style="display: block">
                     اسم :
@@ -52,7 +57,8 @@
                 </label>
                 <br>
                 <br>
-                <Input value="{{$Character->father}}" name="father" type="text" placeholder="اسم پدر کارکتر را وارد کنید">
+                <Input value="{{$Character->father}}" name="father" type="text"
+                       placeholder="اسم پدر کارکتر را وارد کنید">
             </div>
             <div class="row">
                 <label style="display: block">
@@ -60,7 +66,8 @@
                 </label>
                 <br>
                 <br>
-                <Input value="{{$Character->mother}}" name="mother"  type="text" placeholder="اسم مادر کارکتر را وارد کنید">
+                <Input value="{{$Character->mother}}" name="mother" type="text"
+                       placeholder="اسم مادر کارکتر را وارد کنید">
             </div>
             <div class="row">
                 <label style="display: block">
@@ -68,8 +75,9 @@
                 </label>
                 <br>
                 <br>
-                <select name="house" >
+                <select name="house">
                     {{--                    this secition will be dynamic later --}}
+
                     <option>لنیستر</option>
                     <option>استارک</option>
                     <option>تارگرین</option>
@@ -85,9 +93,13 @@
                 </label>
                 <br>
                 <br>
-                <textarea name="aliases" >
+                <textarea name="aliases">
+                    {{implode( "," , json_decode($Character->aliases)) }}
+
 
                 </textarea>
+
+
             </div>
 
 
@@ -97,7 +109,7 @@
                 </label>
                 <br>
                 <br>
-                <Input name="born"  type="text" placeholder="سال تولد بر اساس فتح اگان">
+                <Input value="{{$Character->born}}" name="born" type="text" placeholder="سال تولد بر اساس فتح اگان">
             </div>
 
 
@@ -107,21 +119,32 @@
                 </label>
                 <br>
                 <br>
-                <Input name="died" type="text" placeholder="سال مردن بر اساس فتح اگان">
+                <Input value="{{$Character->died}}" name="died" type="text" placeholder="سال مردن بر اساس فتح اگان">
             </div>
             <div class="row">
                 <label style="display: block">
-                    جنسیت  :
+                    جنسیت :
                 </label>
                 <br>
                 <br>
-                <select name="gender" >
-                    <option value="male">
-                        مذکر
-                    </option>
-                    <option value="female">
-                        مونث
-                    </option>
+                <select name="gender">
+                    @if($Character->isFemale )
+                        <option value="male">
+                            مذکر
+                        </option>
+                        <option selected value="female">
+                            مونث
+                        </option>
+                    @else
+
+                        <option selected value="male">
+                            مذکر
+                        </option>
+                        <option value="female">
+                            مونث
+                        </option>
+                    @endif
+
                 </select>
             </div>
 
@@ -157,7 +180,8 @@
 
 
             <div class="row">
-                <button style="background: #00ac4a;width: 100px;height: 50px;border-radius:30px;box-sizing: border-box;padding: 5px;text-align: center;color: #fff;border: none ">
+                <button
+                    style="background: #00ac4a;width: 100px;height: 50px;border-radius:30px;box-sizing: border-box;padding: 5px;text-align: center;color: #fff;border: none ">
                     ثبت کاراکتر
                 </button>
             </div>
