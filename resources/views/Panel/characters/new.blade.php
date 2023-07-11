@@ -40,6 +40,14 @@
             @csrf
             <div class="row">
                 <label style="display: block">
+                    عکس :
+                </label>
+                <br>
+                <br>
+                <Input name="name" type="image">
+            </div>
+            <div class="row">
+                <label style="display: block">
                     اسم :
                 </label>
                 <br>
