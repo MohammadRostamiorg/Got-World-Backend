@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers\Panel;
+use Illuminate\Support\Facades\Storage;
+
 
 use App\Http\Controllers\Controller;
 use App\Models\Characters;
@@ -9,9 +11,11 @@ use App\Repositories\CharactersRepositrory;
 class CharactersController extends Controller
 {
     public function showAll(){ // for admin panel
+
         $CharactersRepository = new CharactersRepositrory();
         $Characters = $CharactersRepository->getAll();
         return view('Panel.characters.all',compact('Characters'));
+        Storage::disk('liara')->put('example.txt', 'Contents');
     }
 
     public function store(Request $request){

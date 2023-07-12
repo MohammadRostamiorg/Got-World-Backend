@@ -13,6 +13,8 @@ use App\Http\Controllers\Panel\CharactersController;
 |
 */
 
+
+
 Route::get('/', function () {
     return redirect('/panel');
 });

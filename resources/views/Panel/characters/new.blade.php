@@ -44,7 +44,7 @@
                 </label>
                 <br>
                 <br>
-                <Input name="name" type="image">
+                <Input name="pic" type="file">
             </div>
             <div class="row">
                 <label style="display: block">

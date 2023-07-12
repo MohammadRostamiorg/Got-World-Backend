@@ -15,6 +15,7 @@ use App\Http\Controllers\Api\v1\CharactersController as CharactersControllerApi;
 |
 */
 
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
