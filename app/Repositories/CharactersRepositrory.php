@@ -35,20 +35,15 @@ class CharactersRepositrory
         } else {
             $Charcater->IsFemale = false;
         }
-        $Charcater->save();
-        $Charcater = Characters::query()->where('name' ,'='   , $characterInfo->name);
-        if ($characterInfo->hasFile('pic')) {
-//            dd($characterInfo);
-            $image = $characterInfo->file('pic');
-//            dd($image);
 
-            // get image extension
+        if ($characterInfo->hasFile('pic')) {
+            $image = $characterInfo->file('pic');
             $extension = $image->getClientOriginalExtension();
-            $imageName = "character.".time().$extension;
-            var_dump($imageName);
+            $imageName = "Character".  time() . rand(100,999).  ".".$extension;
             $path = Storage::putFileAs('characters',$image,$imageName);
-//            $about->banner = "https://mohammadrostamidevdisk.storage.iran.liara.space/".$path;
+            $Charcater->pic = "https://gotworld.storage.iran.liara.space/".$path;
         }
+        $Charcater->save();
 
 
     }

@@ -21,7 +21,7 @@ class CharactersController extends Controller
     public function store(Request $request){
         $CharactersRepository = new CharactersRepositrory();
         $CharactersRepository->storeCharacter($request);
-//        return redirect('/panel/characters');
+        return redirect('/panel/characters');
     }
 
     public function editStore(Request $request){
