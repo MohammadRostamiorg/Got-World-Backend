@@ -3,6 +3,7 @@
 namespace App\Repositories;
 
 use App\Models\Characters;
+use Illuminate\Support\Facades\Storage;
 
 class CharactersRepositrory
 {
@@ -35,6 +36,18 @@ class CharactersRepositrory
             $Charcater->IsFemale = false;
         }
 
+        if ($characterInfo->hasFile('pic')) {
+//            dd($characterInfo);
+            $image = $characterInfo->file('pic');
+//            dd($image);
+
+            // get image extension
+            $extension = $image->getClientOriginalExtension();
+            $imageName = "pic.".$extension;
+            var_dump($imageName);
+            $path = Storage::putFileAs('characters',$image,$imageName);
+//            $about->banner = "https://mohammadrostamidevdisk.storage.iran.liara.space/".$path;
+        }
         $Charcater->save();
 
     }

@@ -36,7 +36,7 @@
         }
     </style>
     <div class="container">
-        <form method="post" action="{{route('character.store')}}">
+        <form enctype="multipart/form-data" method="post" action="{{route('character.store')}}">
             @csrf
             <div class="row">
                 <label style="display: block">

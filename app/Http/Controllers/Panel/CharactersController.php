@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Panel;
-use Illuminate\Support\Facades\Storage;
+//use Illuminate\Support\Facades\Storage;
 
 
 use App\Http\Controllers\Controller;
@@ -15,13 +15,13 @@ class CharactersController extends Controller
         $CharactersRepository = new CharactersRepositrory();
         $Characters = $CharactersRepository->getAll();
         return view('Panel.characters.all',compact('Characters'));
-        Storage::disk('liara')->put('example.txt', 'Contents');
+
     }
 
     public function store(Request $request){
         $CharactersRepository = new CharactersRepositrory();
         $CharactersRepository->storeCharacter($request);
-        return redirect('/panel/characters');
+//        return redirect('/panel/characters');
     }
 
     public function editStore(Request $request){

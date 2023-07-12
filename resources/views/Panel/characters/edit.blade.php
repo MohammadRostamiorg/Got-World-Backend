@@ -39,7 +39,7 @@
         }
     </style>
     <div class="container">
-        <form method="post" action="{{route('character.editStore')}}">
+        <form enctype="multipart/form-data" method="post" action="{{route('character.editStore')}}">
 
             @csrf
             <input name="id" type="hidden" value="{{ $Character->id }}">
