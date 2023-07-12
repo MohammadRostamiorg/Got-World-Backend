@@ -38,14 +38,7 @@
     <div class="container">
         <form enctype="multipart/form-data" method="post" action="{{route('character.store')}}">
             @csrf
-            <div class="row">
-                <label style="display: block">
-                    عکس :
-                </label>
-                <br>
-                <br>
-                <Input name="pic" type="file">
-            </div>
+
             <div class="row">
                 <label style="display: block">
                     اسم :
@@ -53,6 +46,14 @@
                 <br>
                 <br>
                 <Input name="name" type="text" placeholder="اسم کارکتر را وارد کنید">
+            </div>
+            <div class="row">
+                <label style="display: block">
+                    عکس :
+                </label>
+                <br>
+                <br>
+                <Input name="pic" type="file">
             </div>
             <div class="row">
                 <label style="display: block">

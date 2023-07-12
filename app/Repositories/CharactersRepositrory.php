@@ -35,7 +35,8 @@ class CharactersRepositrory
         } else {
             $Charcater->IsFemale = false;
         }
-
+        $Charcater->save();
+        $Charcater = Characters::query()->where('name' ,'='   , $characterInfo->name);
         if ($characterInfo->hasFile('pic')) {
 //            dd($characterInfo);
             $image = $characterInfo->file('pic');
@@ -43,12 +44,12 @@ class CharactersRepositrory
 
             // get image extension
             $extension = $image->getClientOriginalExtension();
-            $imageName = "pic.".$extension;
+            $imageName = "character.".$Charcater->id.$extension;
             var_dump($imageName);
             $path = Storage::putFileAs('characters',$image,$imageName);
 //            $about->banner = "https://mohammadrostamidevdisk.storage.iran.liara.space/".$path;
         }
-        $Charcater->save();
+
 
     }
 
