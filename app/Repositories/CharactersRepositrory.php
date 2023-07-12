@@ -44,7 +44,7 @@ class CharactersRepositrory
 
             // get image extension
             $extension = $image->getClientOriginalExtension();
-            $imageName = "character.".$Charcater->id.$extension;
+            $imageName = "character.".$extension;
             var_dump($imageName);
             $path = Storage::putFileAs('characters',$image,$imageName);
 //            $about->banner = "https://mohammadrostamidevdisk.storage.iran.liara.space/".$path;
