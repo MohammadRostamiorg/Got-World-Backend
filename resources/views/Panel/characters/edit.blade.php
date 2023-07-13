@@ -37,6 +37,10 @@
         .container textarea {
             height: 100px;
         }
+        .oldPic {
+            width: 80%;
+            margin: auto;
+        }
     </style>
     <div class="container">
         <form enctype="multipart/form-data" method="post" action="{{route('character.editStore')}}">
@@ -51,6 +55,16 @@
                 <br>
                 <Input value="{{$Character->name}}" name="name" type="text" placeholder="اسم کارکتر را وارد کنید">
             </div>
+
+            <div class="row">
+                <label style="display: block">
+                    عکس :
+                </label>
+                <br>
+                <br>
+                <Input name="pic" type="file">
+            </div>
+            <img class="oldPic" src="{{ $Character->pic }}">
             <div class="row">
                 <label style="display: block">
                     پدر :
