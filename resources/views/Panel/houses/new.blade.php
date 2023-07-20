@@ -45,7 +45,7 @@
                 </label>
                 <br>
                 <br>
-                <Input name="name" type="text" placeholder="اسم کارکتر را وارد کنید">
+                <Input name="name" type="text" placeholder="اسم خاندان را وارد کنید">
             </div>
             <div class="row">
                 <label style="display: block">
