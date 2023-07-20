@@ -57,7 +57,7 @@
             </div>
             <div class="row">
                 <label style="display: block">
-                    پدر :
+                    موسس :
                 </label>
                 <br>
                 <br>
@@ -65,7 +65,7 @@
             </div>
             <div class="row">
                 <label style="display: block">
-                    مادر :
+                    قلعه :
                 </label>
                 <br>
                 <br>
