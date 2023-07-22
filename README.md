@@ -1,6 +1,7 @@
 # Got-World
 
-## An open soucre application of world of Ice and Fire
+## An open soucre application of world of Ice and Fire 
+
 
 ### alpha version
 
@@ -11,6 +12,6 @@
        
 
 
-## frontend in :
+## fapp rontend in :
 
 https://github.com/mahdiramezani8/Got-World
