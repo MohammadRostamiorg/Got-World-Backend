@@ -61,7 +61,7 @@
                 </label>
                 <br>
                 <br>
-                <Input name="father" type="text" placeholder="اسم پدر کارکتر را وارد کنید">
+                <Input name="founder" type="text" placeholder="اسم پدر کارکتر را وارد کنید">
             </div>
             <div class="row">
                 <label style="display: block">
