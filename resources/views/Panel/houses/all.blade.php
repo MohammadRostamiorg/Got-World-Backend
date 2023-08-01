@@ -1,4 +1,5 @@
 @extends('Panel.layout.master')
+@extends('Panel.layout.master')
 
 
 @section('content')
@@ -42,14 +43,14 @@
         }
     </style>
     <div class="container">
-        @foreach($Characters as $Character)
+        @foreach($Houses as $House)
             <div class="row">
                 <p>
-                    {{ $Character->name }}
+                    {{ $House->name }}
                 </p>
                 <div class="btns">
 
-                    <form method="post" action="{{ url('/api/characters/delete/'.$Character->id) }}">
+                    <form method="post" action="{{ url('/api/Houses/delete/'.$House->id) }}">
                         @method('delete')
                         @csrf
                         <button class="btn btn-danger">
@@ -58,7 +59,7 @@
                     </form>
 
                     </a>
-                    <a class="block btn-link" href="{{ url('panel/characters/edit/'.$Character->id) }}">
+                    <a class="block btn-link" href="{{ url('panel/Houses/edit/'.$House->id) }}">
                     <span class="btn btn-warning">
 
                             Edit

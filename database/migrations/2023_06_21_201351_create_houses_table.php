@@ -14,13 +14,13 @@ return new class extends Migration
         Schema::create('houses', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('logo');
-            $table->string('CoatOfArms'); // sing of house
-            $table->string('Founded'); // found age
-            $table->string('region');
-            $table->integer('Overlord');  // count of lords
-            $table->json('words');
-            $table->json('titles');
+            $table->string('logo')->nullable();
+            $table->string('CoatOfArms')->nullable(); // sing of house
+            $table->string('Founded')->nullable(); // found age
+            $table->string('region')->nullable();
+            $table->integer('Overlord')->nullable();  // count of lords
+            $table->json('words')->nullable();
+            $table->json('titles')->nullable();
             $table->timestamps();
         });
     }

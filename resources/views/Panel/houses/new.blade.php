@@ -71,42 +71,14 @@
                 <br>
                 <Input name="mother"  type="text" placeholder="اسم مادر کارکتر را وارد کنید">
             </div>
-            <div class="row">
-                <label style="display: block">
-                    خاندان :
-                </label>
-                <br>
-                <br>
-                <select name="house" >
-{{--                    this secition will be dynamic later --}}
-                    <option>لنیستر</option>
-                    <option>استارک</option>
-                    <option>تارگرین</option>
-                    <option>باراتیون</option>
-                    <option>گریجوی</option>
-                    <option>تالی</option>
-                </select>
-            </div>
 
             <div class="row">
                 <label style="display: block">
-                    لقب ها(لقب هارا با کاما , از هم جدا کنید) :
+                    شعار خاندان :
                 </label>
                 <br>
                 <br>
-                <textarea name="aliases" >
-
-                </textarea>
-            </div>
-
-
-            <div class="row">
-                <label style="display: block">
-                    تولد :
-                </label>
-                <br>
-                <br>
-                <Input name="born"  type="text" placeholder="سال تولد بر اساس فتح اگان">
+                <Input name="CoatOfArms"  type="text" placeholder="سال تولد بر اساس فتح اگان">
             </div>
 
 
