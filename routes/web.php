@@ -46,10 +46,10 @@ Route::prefix('/panel')->group(function () {
         });
 
 
-        Route::get('/edit/{id}', [CharactersController::class, 'editCharacter']);
+        Route::get('/edit/{id}', [HousesController::class, 'editHouse']);
 
-        Route::post('store', [CharactersController::class, 'store'])->name('character.store');
-        Route::post('editStore', [CharactersController::class, 'editStore'])->name('character.editStore');
+        Route::post('store', [HousesController::class, 'store'])->name('house.store');
+        Route::post('editStore', [HousesController::class, 'editStore'])->name('house.editStore');
     });
 });
 

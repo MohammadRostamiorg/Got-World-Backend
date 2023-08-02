@@ -84,7 +84,7 @@
 
             <div class="row">
                 <label style="display: block">
-                    مرگ :
+                    تعداد <لرد></لرد> :
                 </label>
                 <br>
                 <br>
