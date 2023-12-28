@@ -36,7 +36,7 @@
         }
     </style>
     <div class="container">
-        <form enctype="multipart/form-data" method="post" action="{{route('character.store')}}">
+        <form enctype="multipart/form-data" method="post" action="{{route('house.store')}}">
             @csrf
 
             <div class="row">
@@ -49,11 +49,11 @@
             </div>
             <div class="row">
                 <label style="display: block">
-                    عکس :
+                    لوگو :
                 </label>
                 <br>
                 <br>
-                <Input name="pic" type="file">
+                <Input name="logo" type="file">
             </div>
             <div class="row">
                 <label style="display: block">
@@ -61,7 +61,7 @@
                 </label>
                 <br>
                 <br>
-                <Input name="founder" type="text" placeholder="اسم پدر کارکتر را وارد کنید">
+                <Input name="founder" type="text" placeholder="اسم موسس خاندان را وارد کنید">
             </div>
             <div class="row">
                 <label style="display: block">
@@ -69,7 +69,7 @@
                 </label>
                 <br>
                 <br>
-                <Input name="mother"  type="text" placeholder="اسم مادر کارکتر را وارد کنید">
+                <Input name="castle"  type="text" placeholder="اسم قلعه مربوط به خاندان را وارد کنید">
             </div>
 
             <div class="row">
@@ -78,56 +78,14 @@
                 </label>
                 <br>
                 <br>
-                <Input name="CoatOfArms"  type="text" placeholder="سال تولد بر اساس فتح اگان">
+                <Input name="CoatOfArms"  type="text" placeholder="شعار اصلی خاندان (استارک : winter is comming)">
             </div>
 
 
-            <div class="row">
-                <label style="display: block">
-                    تعداد <لرد></لرد> :
-                </label>
-                <br>
-                <br>
-                <Input name="died" type="text" placeholder="سال مردن بر اساس فتح اگان">
-            </div>
-            <div class="row">
-                <label style="display: block">
-                    جنسیت  :
-                </label>
-                <br>
-                <br>
-                <select name="gender" >
-                    <option value="male">
-                        مذکر
-                    </option>
-                    <option value="female">
-                        مونث
-                    </option>
-                </select>
-            </div>
 
             <div class="row">
                 <label style="display: block">
-                    فرزند ها(فرزند هارا با کاما , از هم جدا کنید) :
-                </label>
-                <br>
-                <br>
-                <textarea name="children">
-
-                </textarea>
-            </div>
-
-            <div class="row">
-                <label style="display: block">
-                    بازیگر :
-                </label>
-                <br>
-                <br>
-                <Input name="playedBy" type="text" placeholder="چه کسی نقش اورا ایفا کرده">
-            </div>
-            <div class="row">
-                <label style="display: block">
-                    متن معرفی کاراکتر
+                    متن معرفی خاندان
                 </label>
                 <br>
                 <br>

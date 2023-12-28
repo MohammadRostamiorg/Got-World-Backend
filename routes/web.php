@@ -41,7 +41,7 @@ Route::prefix('/panel')->group(function () {
     Route::prefix('houses')->group(function () {
         Route::get('/', [HousesController::class, 'showAll']);
         Route::get('new', function () {
-            return view('Panel.characters.new');
+            return view('Panel.houses.new');
 
         });
 
